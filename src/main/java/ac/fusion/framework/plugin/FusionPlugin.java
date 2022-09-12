@@ -35,8 +35,8 @@ public abstract class FusionPlugin implements Plugin {
         // get the class loader of the plugin
         ClassLoader loader = getClass().getClassLoader();
         // check if someone was trying to instantiate the plugin manually
-        if (!(loader instanceof PluginClassLoader))
-            throw new IllegalStateException("Fusion plugin cannot be instantiated manually.");
+        // if (!(loader instanceof PluginClassLoader))
+        //     throw new IllegalStateException("Fusion plugin cannot be instantiated manually.");
     }
 
     /**

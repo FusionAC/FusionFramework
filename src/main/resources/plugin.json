@@ -1,0 +1,5 @@
+{
+    "name": "TestPlugin",
+    "version": "1.0",
+    "main": "ac.fusion.framework.test.TestPlugin"
+}
