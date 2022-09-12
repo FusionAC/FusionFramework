@@ -1,7 +1,7 @@
 package ac.fusion.framework.util.player;
 
-import ac.fusion.framework.annotation.FusionInit;
-import ac.fusion.framework.check.Preconditions;
+import ac.fusion.framework.util.annotation.FusionInit;
+import ac.fusion.framework.util.check.Preconditions;
 
 /**
  * Represents a registry of the minecraft protocol versions.

@@ -1,5 +1,6 @@
 package ac.fusion.framework.data;
 
+import ac.fusion.framework.data.impl.MovementHandler;
 import ac.fusion.framework.util.player.ProtocolVersion;
 import org.bukkit.entity.Player;
 
@@ -20,13 +21,13 @@ public interface PlayerData {
     long currentTick();
 
     /**
-     * Queue a task that will be executed when the player confirms PRE transaction.
+     * Queue a task that will be executed when the player confirms the last sent PRE transaction.
      * @param task pre transaction confirm task
      */
     void queuePreTask(Runnable task);
 
     /**
-     * Queue a task that will be executed when the player confirms POSt transaction.
+     * Queue a task that will be executed when the player confirms the last sent POST transaction.
      * @param task post transaction confirm task
      */
     void queuePostTask(Runnable task);
@@ -36,4 +37,9 @@ public interface PlayerData {
      * @return client game version
      */
     ProtocolVersion getVersion();
+
+    /**
+     * Get the player movement state data handler.
+     */
+    MovementHandler getMovementHandler();
 }
