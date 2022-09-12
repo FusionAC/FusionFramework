@@ -1,13 +1,39 @@
 package ac.fusion.framework.data;
 
+import ac.fusion.framework.util.player.ProtocolVersion;
 import org.bukkit.entity.Player;
 
+/**
+ * Represents a holder of all the player-related data that fusion stores during gameplay.
+ */
 public interface PlayerData {
+    /**
+     * Get the bukkit player of the data.
+     * @return data holder player
+     */
     Player getPlayer();
 
+    /**
+     * Get the current tick of the player.
+     * @return clientside transaction tick
+     */
     long currentTick();
 
+    /**
+     * Queue a task that will be executed when the player confirms PRE transaction.
+     * @param task pre transaction confirm task
+     */
     void queuePreTask(Runnable task);
 
+    /**
+     * Queue a task that will be executed when the player confirms POSt transaction.
+     * @param task post transaction confirm task
+     */
     void queuePostTask(Runnable task);
+
+    /**
+     * Get the protocol version of the player.
+     * @return client game version
+     */
+    ProtocolVersion getVersion();
 }
