@@ -1,11 +1,12 @@
 package ac.fusion.framework.data.impl;
 
+import ac.fusion.framework.data.DataHandler;
 import ac.fusion.framework.util.annotation.Desync;
 
 /**
  * Represents a data handler of the player movement states.
  */
-public interface MovementHandler {
+public interface MovementHandler extends DataHandler {
     /**
      * Determine if the player is currently on ground clientside.
      * @return client ground state
