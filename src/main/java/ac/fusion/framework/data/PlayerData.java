@@ -1,6 +1,8 @@
 package ac.fusion.framework.data;
 
 import ac.fusion.framework.data.impl.MovementHandler;
+import ac.fusion.framework.data.impl.abilities.AbilitiesHandler;
+import ac.fusion.framework.data.impl.entity.EntityTracker;
 import ac.fusion.framework.util.player.ProtocolVersion;
 import org.bukkit.entity.Player;
 
@@ -42,4 +44,14 @@ public interface PlayerData {
      * Get the player movement state data handler.
      */
     MovementHandler getMovementHandler();
+
+    /**
+     * Get the player abilities data handler.
+     */
+    AbilitiesHandler getAbilitiesHandler();
+
+    /**
+     * Get the entity position tracker.
+     */
+    EntityTracker getEntityTracker();
 }
